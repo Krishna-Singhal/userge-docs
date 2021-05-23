@@ -197,25 +197,25 @@ runAll(5000)
 //     }
 // })
 async function runAll() {
-    await waitForMs(4500)
+    await waitForMs(3000)
     carousel(getban_txt, "#getban-txt")
-    await waitForMs(7400)
+    await waitForMs(3000)
     carousel(getallban_txt, "#getallbans-txt")
-    await waitForMs(6900)
+    await waitForMs(3000)
     carousel(addban_txt, "#addban-txt")
-    await waitForMs(7500)
+    await waitForMs(3000)
     carousel(updateban_txt, "#updateban-txt")
-    await waitForMs(7500)
+    await waitForMs(3000)
     carousel(deleteban_txt, "#deleteban-txt")
-    await waitForMs(7500)
+    await waitForMs(3000)
     carousel(create_token, "#create-token-txt")
-    await waitForMs(7300)
+    await waitForMs(4000)
     carousel(promote_token, "#promote-token-txt")
-    await waitForMs(8000)
+    await waitForMs(4000)
     carousel(demote_token, "#demote-token-txt")
-    await waitForMs(7500)
+    await waitForMs(400)
     carousel(delete_token, "#delete-token-txt")
-    await waitForMs(7500)
+    await waitForMs(4000)
     carousel(stats_txt, "#stats-txt")
 }
 
@@ -237,7 +237,7 @@ async function typeInColor(txt, eleRef) {
     return;
 }
 
-async function typeSentence(sentence, color, eleRef, delay = 35) {
+async function typeSentence(sentence, color, eleRef, delay = 20) {
   let i = 0;
   letters = sentence.split("")
   while(i < letters.length) {
