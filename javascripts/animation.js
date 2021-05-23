@@ -124,7 +124,7 @@ getcolor = {
 // }
 
 carousel(version_txt, "#version-txt")
-runAll(5000)
+// runAll(5000)
 
 
 // var $window = $(window), previousScrollTop = 0, scrollLock = false;
