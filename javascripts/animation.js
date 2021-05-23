@@ -124,12 +124,12 @@ getcolor = {
 // }
 
 carousel(version_txt, "#version-txt")
-// runAll(5000)
+runAll()
 
 
 // var $window = $(window), previousScrollTop = 0, scrollLock = false;
 
-// $window.scroll(function(event) {     
+// $window.scroll(function(event) {
 //     if(scrollLock) {
 //         $window.scrollTop(previousScrollTop); 
 //     }
@@ -197,9 +197,9 @@ carousel(version_txt, "#version-txt")
 //     }
 // })
 async function runAll() {
-    await waitForMs(3000)
+    await waitForMs(2000)
     carousel(getban_txt, "#getban-txt")
-    await waitForMs(3000)
+    await waitForMs(2000)
     carousel(getallban_txt, "#getallbans-txt")
     await waitForMs(3000)
     carousel(addban_txt, "#addban-txt")
@@ -209,13 +209,13 @@ async function runAll() {
     carousel(deleteban_txt, "#deleteban-txt")
     await waitForMs(3000)
     carousel(create_token, "#create-token-txt")
-    await waitForMs(4000)
+    await waitForMs(3000)
     carousel(promote_token, "#promote-token-txt")
-    await waitForMs(4000)
+    await waitForMs(3000)
     carousel(demote_token, "#demote-token-txt")
-    await waitForMs(400)
+    await waitForMs(3000)
     carousel(delete_token, "#delete-token-txt")
-    await waitForMs(4000)
+    await waitForMs(3000)
     carousel(stats_txt, "#stats-txt")
 }
 
@@ -237,7 +237,7 @@ async function typeInColor(txt, eleRef) {
     return;
 }
 
-async function typeSentence(sentence, color, eleRef, delay = 5) {
+async function typeSentence(sentence, color, eleRef, delay = 10) {
   let i = 0;
   letters = sentence.split("")
   while(i < letters.length) {
