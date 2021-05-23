@@ -237,7 +237,7 @@ async function typeInColor(txt, eleRef) {
     return;
 }
 
-async function typeSentence(sentence, color, eleRef, delay = 20) {
+async function typeSentence(sentence, color, eleRef, delay = 5) {
   let i = 0;
   letters = sentence.split("")
   while(i < letters.length) {
