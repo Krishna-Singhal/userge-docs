@@ -69,49 +69,49 @@
 //     '").json()'
 // ]
 
-auth_text = `import userge_fed
+auth_text = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)`;
+client = Client(API_KEY)`;
 
-version_txt = `import userge_fed
+version_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.get_version)`;
+print(client.get_version().json())`;
 
-getban_txt = `import userge_fed
+getban_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.get_ban(777000))`;
+print(client.getban(777000).json())`;
 
-getallban_txt = `import userge_fed
+getallban_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.get_ban())`;
+print(client.getbans().json())`;
 
-addban_txt = `import userge_fed
+addban_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.add_ban(777000, "reason of ban"))`;
+print(client.add_ban(777000, "reason of ban").json())`;
 
-updateban_txt = `import userge_fed
+updateban_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.update_ban(777000, "reason of ban"))`;
+print(client.update_ban(777000, "reason of ban").json())`;
 
-deleteban_txt = `import userge_fed
+deleteban_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.delete_ban(777000))`;
+print(client.delete_ban(777000).json())`;
 
-get_me = `import userge_fed
+get_me = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
 print(client.get_me())`;
 
@@ -126,29 +126,29 @@ data = {
 
 return requests.post(url, data=data).json()`;
 
-promote_token = `import userge_fed
+promote_token = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.promote_user(777000, ["can_ban", "can_unban"]))`;
+print(client.promote_user(777000, ["can_ban", "can_unban"]).json())`;
 
-demote_token  = `import userge_fed
+demote_token  = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.demote_user(777000))`;
+print(client.demote_user(777000).json())`;
 
-delete_token = `import userge_fed
+delete_token = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.delete_my_token()))`;
+print(client.delete_my_token().json())`;
 
-stats_txt = `import userge_fed
+stats_txt = `from UsergAntiSpamApi import Client
 
-client = userge_fed.Client(API_KEY)
+client = Client(API_KEY)
 
-print(client.get_api_stats()))`;
+print(client.get_api_stats().json())`;
 
 carouselcheck = {
     "version": false,
