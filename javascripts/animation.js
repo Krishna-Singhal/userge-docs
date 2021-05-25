@@ -226,7 +226,6 @@ window.addEventListener("scroll", function () {
     // }
 
     // previousScrollTop = $window.scrollTop();
-    document.getElementById("demo").innerHTML = window.pageYOffset
     if (processing == false) {
         if (window.pageYOffset > offsets[0]) {
             if (carouselcheck.getban == false) {
