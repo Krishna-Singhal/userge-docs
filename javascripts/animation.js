@@ -1,23 +1,6 @@
-// version_txt = [
-//     'import',
-//     ' requests\n\n',
-//     'return',
-//     ' requests.get("',
-//     'https://api.userge.tk/version',
-//     '").json()'
-// ]
-// getban_txt = [
-//     'import',
-//     ' requests\n\n',
-//     'token ',
-//     '=',
-//     ' "your_api_key"\n',
-//     'id', ' ', '=', ' ',  '777000',
-//     '\nurl ', '=', ' ',
-//     'f"https://api.userge.tk/getban?api_key={',
-//     'token', '}&user_id={', 'id', '}', '"\n\n',
-//     'return', ' requests.get(', 'url', ').json()'
-// ]
+// auth_text = ['from',' UsergAntiSpamApi ','import', ' Client\n\n', 'client ', '=', ' Client(', 'API_KEY', ')']
+// version_txt = ['from',' UsergAntiSpamApi ','import', ' Client\n\n', 'client ', '=', ' Client(', 'API_KEY', ').getban(', '777000', ')']
+// getban_txt = ['from',' UsergAntiSpamApi ','import', ' Client\n\n', 'client ', '=', ' Client(', 'API_KEY', ').getbans()']
 // getallban_txt = [
 //     'import',
 //     ' requests\n\n',
@@ -43,6 +26,7 @@
 // '    "api_key": "your_api_key",\n',
 // '    "user_id": ', '777000', ',',
 // '\n}\n\n', 'return', ' requests.post("', 'https://api.userge.tk/deleteban', '", data', '=', 'data).json()']
+// get_me = []
 // create_token = ['import', ' requests\n\n', 'url ', '=', ' "', 'https://api.userge.tk/createtoken', '"\n\ndata ', '=', ' {\n',
 // '    "user_id": ', '777000', ',\n',
 // '    "name": "Krishna"',
@@ -69,51 +53,55 @@
 //     '").json()'
 // ]
 
-auth_text = `from UsergAntiSpamApi import Client
+auth_text = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)`;
 
-version_txt = `from UsergAntiSpamApi import Client
+version_txt = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.get_version().json())`;
+print(client.get_version())`;
 
-getban_txt = `from UsergAntiSpamApi import Client
-
-client = Client(API_KEY)
-
-print(client.getban(777000).json())`;
-
-getallban_txt = `from UsergAntiSpamApi import Client
+getban_txt = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.getbans().json())`;
+ban = client.getban(777000)
+print(ban.user_id, " Banned by ", ban.admin.user_id)`;
 
-addban_txt = `from UsergAntiSpamApi import Client
-
-client = Client(API_KEY)
-
-print(client.add_ban(777000, "reason of ban").json())`;
-
-updateban_txt = `from UsergAntiSpamApi import Client
+getallban_txt = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.update_ban(777000, "reason of ban").json())`;
+bans client.getbans()
+for ban in bans:
+    print(ban.user_id, " Banned by ", ban.admin.user_id)`;
 
-deleteban_txt = `from UsergAntiSpamApi import Client
-
-client = Client(API_KEY)
-
-print(client.delete_ban(777000).json())`;
-
-get_me = `from UsergAntiSpamApi import Client
+addban_txt = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.get_me())`;
+print(client.add_ban(777000, "reason of ban"))`;
+
+updateban_txt = `from UsergeAntiSpamApi import Client
+
+client = Client(API_KEY)
+
+print(client.update_ban(777000, "reason of ban"))`;
+
+deleteban_txt = `from UsergeAntiSpamApi import Client
+
+client = Client(API_KEY)
+
+print(client.delete_ban(777000))`;
+
+get_me = `from UsergeAntiSpamApi import Client
+
+client = Client(API_KEY)
+
+me = client.get_me()
+print(me.user_id, me.name, me.token)`;
 
 create_token = `import requests
 
@@ -126,29 +114,29 @@ data = {
 
 return requests.post(url, data=data).json()`;
 
-promote_token = `from UsergAntiSpamApi import Client
+promote_token = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.promote_user(777000, ["can_ban", "can_unban"]).json())`;
+print(client.promote_user(777000, ["can_ban", "can_unban"]))`;
 
-demote_token  = `from UsergAntiSpamApi import Client
-
-client = Client(API_KEY)
-
-print(client.demote_user(777000).json())`;
-
-delete_token = `from UsergAntiSpamApi import Client
+demote_token  = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.delete_my_token().json())`;
+print(client.demote_user(777000))`;
 
-stats_txt = `from UsergAntiSpamApi import Client
+delete_token = `from UsergeAntiSpamApi import Client
 
 client = Client(API_KEY)
 
-print(client.get_api_stats().json())`;
+print(client.delete_my_token())`;
+
+stats_txt = `from UsergeAntiSpamApi import Client
+
+client = Client(API_KEY)
+
+print("No. of Bans are ", client.get_api_stats())`;
 
 carouselcheck = {
     "version": false,
@@ -166,26 +154,14 @@ carouselcheck = {
 }
 
 // getcolor = {
+//     "from": "#f92672",
 //     "import": "#f92672",
 //     "return": "#f92672",
 //     "777000": "#ae81ff",
 //     "=": "#f92672",
-//     "id": "#f6aa11",
-//     "token": "white",
-//     'url': "#e6db74",
-//     "https://api.userge.tk/version": "#e6db74",
-//     "https://api.userge.tk/stats": "#e6db74",
-//     'f"https://api.userge.tk/getban?api_key={': "#e6db74",
-//     '}&user_id={': "#e6db74",
-//     "}": "#e6db74",
-//     "https://api.userge.tk/addban": "#e6db74",
-//     "https://api.userge.tk/deleteban": "#e6db74",
-//     "https://api.userge.tk/updateban": "#e6db74",
-//     "https://api.userge.tk/createtoken": "#e6db74",
-//     "https://api.userge.tk/promotetoken": "#e6db74",
-//     "https://api.userge.tk/demotetoken": "#e6db74",
-//     "https://api.userge.tk/deletetoken": "#e6db74"
+//     "API_KEY": "#e6db74"
 // }
+
 offsets = []
 getPixelsforanimation()
 
@@ -338,6 +314,7 @@ async function typeInColor(txt, eleRef) {
     await typeSentence(txt[i], color, eleRef)
     i++;
     }
+    processing = false
     // scrollLock = false;
     return;
 }
