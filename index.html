@@ -573,7 +573,7 @@ The API has 1 type of User Right and 4 type of Admin Rights.</p>
 <h1 id='bans'>Bans</h1><h2 id='getting-a-specfic-ban'>Getting a specfic ban</h2>
 <p>Check the ban status of a specific User.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="getban-txt"></code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://api.userge.tk/ban?api_key=$token&amp;user_id=$id</code></p>
+<p><code>GET https://api.userge.live/ban?api_key=$token&amp;user_id=$id</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -593,7 +593,7 @@ The API has 1 type of User Right and 4 type of Admin Rights.</p>
 <h2 id='getting-all-bans'>Getting all bans</h2>
 <p>This will return List of all Bans.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="getallbans-txt"></code></pre></div><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET https://api.userge.tk/ban?api_key=$token</code></p>
+<p><code>GET https://api.userge.live/ban?api_key=$token</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -613,7 +613,7 @@ The API has 1 type of User Right and 4 type of Admin Rights.</p>
 Read more about the permission levels <a href="#permissions">here</a>.
 </aside>
 <h2 id='adding-a-ban'>Adding a ban</h2><div class="highlight"><pre class="highlight python tab-python"><code id="addban-txt"></code></pre></div><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>POST https://api.userge.tk/ban</code></p>
+<p><code>POST https://api.userge.live/ban</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -649,7 +649,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h2 id='updating-a-ban'>Updating a ban</h2>
 <p>This method will Update a Old Ban.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="updateban-txt"></code></pre></div><h3 id='http-request-5'>HTTP Request</h3>
-<p><code>POST https://api.userge.tk/updateban</code></p>
+<p><code>POST https://api.userge.live/updateban</code></p>
 <h3 id='headers-2'>Headers</h3>
 <table><thead>
 <tr>
@@ -685,7 +685,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h3 id='required-permission-level-2'>Required permission level</h3>
 <p>Admin with <code>can_ban</code> Rights.</p>
 <h2 id='deleting-a-ban'>Deleting a Ban</h2><div class="highlight"><pre class="highlight python tab-python"><code id="deleteban-txt"></code></pre></div><h3 id='http-request-6'>HTTP Request</h3>
-<p><code>DELETE https://api.userge.tk/ban</code></p>
+<p><code>DELETE https://api.userge.live/ban</code></p>
 <h3 id='headers-3'>Headers</h3>
 <table><thead>
 <tr>
@@ -719,7 +719,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h1 id='tokens'>Tokens</h1><h2 id='getting-your-own-token'>Getting your own Token</h2>
 <p>You can directly create your token with <a href="https://t.me/UsergeAntiSpamBot"><code>Userge AntiSpam Bot</code></a>.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="create-token-txt"></code></pre></div><h3 id='http-request-7'>HTTP Request</h3>
-<p><code>POST https://api.userge.tk/token</code></p>
+<p><code>POST https://api.userge.live/token</code></p>
 <h3 id='headers-4'>Headers</h3>
 <table><thead>
 <tr>
@@ -749,7 +749,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 </tr>
 </tbody></table>
 <h2 id='get-self'>Getting about own token</h2><div class="highlight"><pre class="highlight python tab-python"><code id="getme-txt"></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET https://api.userge.tk/token/self?api_key=$token</code></p>
+<p><code>GET https://api.userge.live/token/self?api_key=$token</code></p>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -762,7 +762,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 </tr>
 </tbody></table>
 <h2 id='promoting-a-token'>Promoting a Token</h2><div class="highlight"><pre class="highlight python tab-python"><code id="promote-token-txt"></code></pre></div><h3 id='http-request-8'>HTTP Request</h3>
-<p><code>POST https://api.userge.tk/promotetoken</code></p>
+<p><code>POST https://api.userge.live/promotetoken</code></p>
 <h3 id='headers-5'>Headers</h3>
 <table><thead>
 <tr>
@@ -800,7 +800,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h2 id='demoting-a-token'>Demoting a Token</h2>
 <p>This endpoint will demote a token to <code>User</code> Type.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="demote-token-txt"></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
-<p><code>POST https://api.userge.tk/demotetoken</code></p>
+<p><code>POST https://api.userge.live/demotetoken</code></p>
 <h3 id='headers-6'>Headers</h3>
 <table><thead>
 <tr>
@@ -832,7 +832,7 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h3 id='required-permission-level-5'>Required Permission Level</h3>
 <p>Admin with <code>can_demote</code> Rights.</p>
 <h2 id='deleting-a-token'>Deleting a Token</h2><div class="highlight"><pre class="highlight python tab-python"><code id="delete-token-txt"></code></pre></div><h3 id='http-request-10'>HTTP Request</h3>
-<p><code>DELETE https://api.userge.tk/token</code></p>
+<p><code>DELETE https://api.userge.live/token</code></p>
 <h3 id='headers-7'>Headers</h3>
 <table><thead>
 <tr>
@@ -865,11 +865,11 @@ Read more about the permission levels <a href="#permissions">here</a>.
 <h2 id='getting-the-api-version'>Getting the Api version</h2><div class="highlight"><pre class="highlight python tab-python"><code id="version-txt"></code></pre></div>
 <p>This returns the major, minor, micro and patch version of the API. This endpoint doesn&#39;t need a Authorization Token.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://api.userge.tk/version</code></p>
+<p><code>GET https://api.userge.live/version</code></p>
 <h2 id='getting-stats-of-api'>Getting stats of API</h2>
 <p>This returns the total number of bans in Userge Api. This endpoint doesn&#39;t need a Authorization Token.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code id="stats-txt"></code></pre></div><h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET https://api.userge.tk/stats</code></p>
+<p><code>GET https://api.userge.live/stats</code></p>
 <h1 id='errors'>Errors</h1>
 <p>The Userge API uses the following error codes:</p>
 
